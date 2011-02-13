@@ -1,2 +1,4 @@
-<h1>Trucks#map</h1>
-<p>Find me in app/views/trucks/map.html.erb</p>
+<%= raw Cartographer::Header.new.to_s %>
+<%= raw @map.to_html%>
+
+<div style="width:600px;height:400px;" id="map" > [Map]</div> 
