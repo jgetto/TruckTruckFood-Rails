@@ -1,4 +1,8 @@
 Trucktruckfood::Application.routes.draw do
+  get "trucks/map"
+
+  get "trucks/locate"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
