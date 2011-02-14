@@ -1807,3 +1807,17 @@ Started GET "/trucks/map" for 127.0.0.1 at Sun Feb 13 21:40:03 -0500 2011
   [1m[36mTruck Load (1.0ms)[0m  [1mSELECT "trucks".* FROM "trucks"[0m
 Rendered trucks/map.html.erb within layouts/application (5.0ms)
 Completed 200 OK in 144ms (Views: 23.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/locate.json?lat=42.291444&lon=-71.2640769&dist=2" for 127.0.0.1 at Sun Feb 13 21:50:51 -0500 2011
+  Processing by TrucksController#locate as JSON
+  Parameters: {"lon"=>"-71.2640769", "dist"=>"2", "lat"=>"42.291444"}
+  [1m[35mTruck Load (1.0ms)[0m  SELECT "trucks".* FROM "trucks"
+Completed 200 OK in 22ms (Views: 13.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/locate.json?lat=42.291444&lon=-71.2640769&dist=2" for 127.0.0.1 at Sun Feb 13 21:51:04 -0500 2011
+  Processing by TrucksController#locate as JSON
+  Parameters: {"lon"=>"-71.2640769", "dist"=>"2", "lat"=>"42.291444"}
+  [1m[36mTruck Load (1.0ms)[0m  [1mSELECT "trucks".* FROM "trucks"[0m
+Completed 200 OK in 56ms (Views: 46.0ms | ActiveRecord: 1.0ms)

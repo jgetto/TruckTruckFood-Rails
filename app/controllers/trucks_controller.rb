@@ -11,6 +11,11 @@ class TrucksController < ApplicationController
     end
   end
 
+  def create
+    @truck = Truck.create(params[])
+    
+  end
+  
   def show
     @truck = Truck.find(params[:id])
     respond_to do |format|
@@ -24,5 +29,10 @@ class TrucksController < ApplicationController
     user_lon = params[:lon].to_f
     dist = params[:dist].to_i
     @trucks = find_within( user_lat,  user_lon, dist)
+    respond_to do |format|
+    format.html # show.html.erb
+    format.xml  { render :xml => @story }
+    format.json { render :json => @trucks}
+    end
   end
 end
