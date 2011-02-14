@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 .bundle
 db/*.sqlite3
 log/*.log
 tmp/**/*
 .idea
-=======
 .DS_Store
->>>>>>> ab5a89635b666435721346bba0b56ac19ec552f6
