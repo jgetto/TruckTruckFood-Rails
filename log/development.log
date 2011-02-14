@@ -1800,3 +1800,10 @@ Started GET "/trucks/7" for 127.0.0.1 at Sun Feb 13 20:00:45 -0500 2011
   [1m[35mTruck Load (1.0ms)[0m  SELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 7) LIMIT 1
 Rendered trucks/show.html.erb within layouts/application (8.0ms)
 Completed 200 OK in 37ms (Views: 28.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/map" for 127.0.0.1 at Sun Feb 13 21:40:03 -0500 2011
+  Processing by TrucksController#map as HTML
+  [1m[36mTruck Load (1.0ms)[0m  [1mSELECT "trucks".* FROM "trucks"[0m
+Rendered trucks/map.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 144ms (Views: 23.0ms | ActiveRecord: 1.0ms)
