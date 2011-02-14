@@ -2,9 +2,8 @@ Trucktruckfood::Application.routes.draw do
   
   get "trucks/map"
   get "trucks/locate"
-  match "trucks/:id" => "trucks#show"
-  post "trucks/create"
-
+  post "truck" => "trucks#create" 
+  get "trucks/:id" => "trucks#show"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

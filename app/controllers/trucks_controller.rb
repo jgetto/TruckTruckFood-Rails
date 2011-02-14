@@ -11,9 +11,19 @@ class TrucksController < ApplicationController
     end
   end
 
+  #POST trucks
   def create
-    @truck = Truck.create(params[])
-    
+    @truck = Truck.create(params[:truck])
+
+    respond_to do |format|
+      if @truck.save
+        format.html # show.html.erb
+        format.json {render :json => @truck}
+      else
+        format.html # show.html.erb
+        format.json {render :json => @truck.errors}
+      end
+    end
   end
   
   def show
