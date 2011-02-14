@@ -1,12 +1,13 @@
 class TrucksController < ApplicationController
   def map
+    @trucks = Truck.all
     @map = Cartographer::Gmap.new( 'map' )
     @map.zoom = :bound
     @map.icons << Cartographer::Gicon.new
-    Truck.all.each do |truck|
+    @trucks.each do |truck|
       temp_marker = Cartographer::Gmarker.new(:name=> truck[:name], :marker_type => "Building",
                                                :position => [truck[:lat],truck[:lon]],
-                                               :info_window_url => truck[:id].to_s)
+                                               :info_window_url => 'trucks/' + truck[:id].to_s)
       @map.markers << temp_marker
     end
   end

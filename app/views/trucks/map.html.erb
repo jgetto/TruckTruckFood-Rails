@@ -1,4 +1,17 @@
 <%= raw Cartographer::Header.new.to_s %>
 <%= raw @map.to_html%>
 
-<div style="width:600px;height:400px;" id="map" > [Map]</div> 
+
+<div id="header" >truck truck food.</div>
+<div id="content">
+  <div style="width:20%;float:left;" id="list">
+    <% @trucks.each do |truck| %>
+        <div class="row">
+          <strong><%= add_space(truck[:name]).downcase %></strong><%= gps2addr(truck[:lat],truck[:lon]) %><br/>
+        </div>
+    <% end %>
+  </div>
+
+  <div id="map" >It looks like there are no trucks right now.</div>
+
+</div>
