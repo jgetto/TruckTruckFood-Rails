@@ -1266,3 +1266,537 @@ ActionController::RoutingError (No route matches "/trucks/site_url"):
   
 
 Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/trucks/map" for 127.0.0.1 at Sun Feb 13 19:34:44 -0500 2011
+
+AbstractController::ActionNotFound (The action 'show' could not be found for TrucksController):
+  
+
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.0ms)
+
+
+Started GET "/trucks/map" for 127.0.0.1 at Sun Feb 13 19:36:21 -0500 2011
+  Processing by TrucksController#show as HTML
+  Parameters: {"id"=>"map"}
+Rendered trucks/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trucks/show" for 127.0.0.1 at Sun Feb 13 19:37:15 -0500 2011
+  Processing by TrucksController#show as HTML
+  Parameters: {"id"=>"show"}
+Rendered trucks/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trucks/" for 127.0.0.1 at Sun Feb 13 19:37:24 -0500 2011
+
+AbstractController::ActionNotFound (The action 'index' could not be found for TrucksController):
+  
+
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.0ms)
+
+
+Started GET "/trucks/" for 127.0.0.1 at Sun Feb 13 19:38:49 -0500 2011
+
+ArgumentError (missing :action):
+  config/routes.rb:3
+  config/routes.rb:2
+  config/routes.rb:1
+
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.0ms)
+
+
+Started GET "/trucks/" for 127.0.0.1 at Sun Feb 13 19:46:24 -0500 2011
+
+ActionController::RoutingError (No route matches "/trucks"):
+  
+
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/trucks/map" for 127.0.0.1 at Sun Feb 13 19:46:32 -0500 2011
+  Processing by TrucksController#map as HTML
+  [1m[35mTruck Load (0.0ms)[0m  SELECT "trucks".* FROM "trucks"
+Completed   in 8ms
+
+TypeError (can't convert Fixnum into String):
+  app/controllers/trucks_controller.rb:9:in `+'
+  app/controllers/trucks_controller.rb:9:in `map'
+  app/controllers/trucks_controller.rb:6:in `each'
+  app/controllers/trucks_controller.rb:6:in `map'
+
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.0ms)
+
+
+Started GET "/trucks/map" for 127.0.0.1 at Sun Feb 13 19:46:39 -0500 2011
+  Processing by TrucksController#map as HTML
+  [1m[36mTruck Load (1.0ms)[0m  [1mSELECT "trucks".* FROM "trucks"[0m
+Rendered trucks/map.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 32ms (Views: 23.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/truck/3" for 127.0.0.1 at Sun Feb 13 19:46:41 -0500 2011
+
+ActionController::RoutingError (No route matches "/trucks/truck/3"):
+  
+
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/trucks/map" for 127.0.0.1 at Sun Feb 13 19:46:51 -0500 2011
+  Processing by TrucksController#map as HTML
+  [1m[35mTruck Load (1.0ms)[0m  SELECT "trucks".* FROM "trucks"
+Rendered trucks/map.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 35ms (Views: 25.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/3" for 127.0.0.1 at Sun Feb 13 19:46:53 -0500 2011
+
+ActionController::RoutingError (No route matches "/trucks/3"):
+  
+
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/trucks/map" for 127.0.0.1 at Sun Feb 13 19:47:13 -0500 2011
+  Processing by TrucksController#map as HTML
+  [1m[36mTruck Load (0.0ms)[0m  [1mSELECT "trucks".* FROM "trucks"[0m
+Rendered trucks/map.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 78ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trucks/3" for 127.0.0.1 at Sun Feb 13 19:47:15 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"3"}
+Completed   in 1ms
+
+NameError (undefined local variable or method `trucks' for #<TrucksController:0x887b410>):
+  app/controllers/trucks_controller.rb:15:in `show'
+
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.0ms)
+
+
+Started GET "/trucks/map" for 127.0.0.1 at Sun Feb 13 19:47:51 -0500 2011
+  Processing by TrucksController#map as HTML
+  [1m[35mTruck Load (1.0ms)[0m  SELECT "trucks".* FROM "trucks"
+Rendered trucks/map.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 29ms (Views: 22.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/3" for 127.0.0.1 at Sun Feb 13 19:47:53 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mTruck Load (0.0ms)[0m  SELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 3) LIMIT 1
+Rendered trucks/show.html.erb within layouts/application (12.0ms)
+Completed   in 87ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <p>
+    2:   <b>Name</b>
+    3:   <%= @product.name%>
+    4: </p>
+    5: 
+    6: <p>
+  app/views/trucks/show.html.erb:3:in `_app_views_trucks_show_html_erb__935287674_71818872_0'
+  app/controllers/trucks_controller.rb:16:in `show'
+
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.0ms)
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (28.0ms)
+
+
+Started GET "/trucks/map" for 127.0.0.1 at Sun Feb 13 19:48:09 -0500 2011
+  Processing by TrucksController#map as HTML
+  [1m[36mTruck Load (0.0ms)[0m  [1mSELECT "trucks".* FROM "trucks"[0m
+Rendered trucks/map.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 36ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trucks/3" for 127.0.0.1 at Sun Feb 13 19:48:13 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[35mTruck Load (0.0ms)[0m  SELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 3) LIMIT 1
+Rendered trucks/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 43ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trucks/1" for 127.0.0.1 at Sun Feb 13 19:48:14 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTruck Load (0.0ms)[0m  [1mSELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 1) LIMIT 1[0m
+Rendered trucks/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 40ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trucks/1" for 127.0.0.1 at Sun Feb 13 19:48:26 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[35mTruck Load (0.0ms)[0m  SELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 1) LIMIT 1
+Rendered trucks/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 84ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trucks/4" for 127.0.0.1 at Sun Feb 13 19:48:27 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mTruck Load (1.0ms)[0m  [1mSELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 4) LIMIT 1[0m
+Rendered trucks/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 40ms (Views: 30.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/3" for 127.0.0.1 at Sun Feb 13 19:48:31 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[35mTruck Load (1.0ms)[0m  SELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 3) LIMIT 1
+Rendered trucks/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 40ms (Views: 30.0ms | ActiveRecord: 1.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (80.0ms)[0m  [1mCREATE TABLE "trucks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "site_url" varchar(255), "lat" float, "lon" float, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (84.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (90.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (73.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110213212020')
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "trucks" ("created_at", "name", "lat", "updated_at", "site_url", "lon") VALUES ('2011-02-14 00:49:12.880600', 'Olin_Truck', 42.291444, '2011-02-14 00:49:12.880600', 'http://www.olin.edu', -71.2640769)
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO "trucks" ("created_at", "name", "lat", "updated_at", "site_url", "lon") VALUES ('2011-02-14 00:49:13.064600', 'Babson_Truck', 42.2969514, '2011-02-14 00:49:13.064600', 'http://www.babson.edu', -71.2652577)[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "trucks" ("created_at", "name", "lat", "updated_at", "site_url", "lon") VALUES ('2011-02-14 00:49:13.141600', 'Wellesley_Truck', 42.293405, '2011-02-14 00:49:13.141600', 'http://www.wellesley.edu', -71.3067231)
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "trucks" ("created_at", "name", "lat", "updated_at", "site_url", "lon") VALUES ('2011-02-14 00:49:13.221600', 'MIT_Truck', 42.3597957, '2011-02-14 00:49:13.221600', 'http://www.mit.edu', -71.0944908)[0m
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "trucks" ("lat", "name", "site_url", "updated_at", "lon", "created_at") VALUES (42.291444, 'Olin_Truck', 'http://www.olin.edu', '2011-02-14 00:49:32.217600', -71.2640769, '2011-02-14 00:49:32.217600')
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO "trucks" ("lat", "name", "site_url", "updated_at", "lon", "created_at") VALUES (42.2969514, 'Babson_Truck', 'http://www.babson.edu', '2011-02-14 00:49:32.390600', -71.2652577, '2011-02-14 00:49:32.390600')[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "trucks" ("lat", "name", "site_url", "updated_at", "lon", "created_at") VALUES (42.293405, 'Wellesley_Truck', 'http://www.wellesley.edu', '2011-02-14 00:49:32.475600', -71.3067231, '2011-02-14 00:49:32.475600')
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO "trucks" ("lat", "name", "site_url", "updated_at", "lon", "created_at") VALUES (42.3597957, 'MIT_Truck', 'http://www.mit.edu', '2011-02-14 00:49:32.547600', -71.0944908, '2011-02-14 00:49:32.547600')[0m
+
+
+Started GET "/trucks/map" for 127.0.0.1 at Sun Feb 13 19:50:40 -0500 2011
+  Processing by TrucksController#map as HTML
+  [1m[36mTruck Load (1.0ms)[0m  [1mSELECT "trucks".* FROM "trucks"[0m
+Rendered trucks/map.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 110ms (Views: 25.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/7" for 127.0.0.1 at Sun Feb 13 19:50:47 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mTruck Load (0.0ms)[0m  [1mSELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 7) LIMIT 1[0m
+Rendered trucks/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 43ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trucks/map" for 127.0.0.1 at Sun Feb 13 19:51:21 -0500 2011
+  Processing by TrucksController#map as HTML
+  [1m[35mTruck Load (1.0ms)[0m  SELECT "trucks".* FROM "trucks"
+Rendered trucks/map.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 30ms (Views: 23.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/7" for 127.0.0.1 at Sun Feb 13 19:51:22 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mTruck Load (0.0ms)[0m  [1mSELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 7) LIMIT 1[0m
+Rendered trucks/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 39ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trucks/map" for 127.0.0.1 at Sun Feb 13 19:51:28 -0500 2011
+  Processing by TrucksController#map as HTML
+  [1m[35mTruck Load (1.0ms)[0m  SELECT "trucks".* FROM "trucks"
+Rendered trucks/map.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 36ms (Views: 25.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/7" for 127.0.0.1 at Sun Feb 13 19:51:29 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mTruck Load (0.0ms)[0m  [1mSELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 7) LIMIT 1[0m
+Rendered trucks/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 40ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trucks/5" for 127.0.0.1 at Sun Feb 13 19:51:33 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[35mTruck Load (0.0ms)[0m  SELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 5) LIMIT 1
+Rendered trucks/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 40ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trucks/8" for 127.0.0.1 at Sun Feb 13 19:51:35 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mTruck Load (1.0ms)[0m  [1mSELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 8) LIMIT 1[0m
+Rendered trucks/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 39ms (Views: 30.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/7" for 127.0.0.1 at Sun Feb 13 19:51:43 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[35mTruck Load (0.0ms)[0m  SELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 7) LIMIT 1
+Rendered trucks/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 39ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trucks/map" for 127.0.0.1 at Sun Feb 13 19:53:08 -0500 2011
+  Processing by TrucksController#map as HTML
+  [1m[36mTruck Load (1.0ms)[0m  [1mSELECT "trucks".* FROM "trucks"[0m
+Rendered trucks/map.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 32ms (Views: 24.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/7" for 127.0.0.1 at Sun Feb 13 19:53:10 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[35mTruck Load (0.0ms)[0m  SELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 7) LIMIT 1
+Rendered trucks/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 44ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trucks/5" for 127.0.0.1 at Sun Feb 13 19:53:13 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mTruck Load (1.0ms)[0m  [1mSELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 5) LIMIT 1[0m
+Rendered trucks/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 43ms (Views: 34.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/map" for 127.0.0.1 at Sun Feb 13 19:53:36 -0500 2011
+  Processing by TrucksController#map as HTML
+  [1m[35mTruck Load (1.0ms)[0m  SELECT "trucks".* FROM "trucks"
+Rendered trucks/map.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 38ms (Views: 27.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/7" for 127.0.0.1 at Sun Feb 13 19:53:38 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mTruck Load (1.0ms)[0m  [1mSELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 7) LIMIT 1[0m
+Rendered trucks/show.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 48ms (Views: 38.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/map" for 127.0.0.1 at Sun Feb 13 19:53:53 -0500 2011
+  Processing by TrucksController#map as HTML
+  [1m[35mTruck Load (1.0ms)[0m  SELECT "trucks".* FROM "trucks"
+Rendered trucks/map.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 37ms (Views: 26.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/7" for 127.0.0.1 at Sun Feb 13 19:53:54 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mTruck Load (0.0ms)[0m  [1mSELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 7) LIMIT 1[0m
+Rendered trucks/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 40ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trucks/5" for 127.0.0.1 at Sun Feb 13 19:53:56 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[35mTruck Load (0.0ms)[0m  SELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 5) LIMIT 1
+Rendered trucks/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 39ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trucks/map" for 127.0.0.1 at Sun Feb 13 19:54:03 -0500 2011
+  Processing by TrucksController#map as HTML
+  [1m[36mTruck Load (1.0ms)[0m  [1mSELECT "trucks".* FROM "trucks"[0m
+Rendered trucks/map.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 36ms (Views: 26.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/7" for 127.0.0.1 at Sun Feb 13 19:54:04 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[35mTruck Load (1.0ms)[0m  SELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 7) LIMIT 1
+Rendered trucks/show.html.erb within layouts/application (18.0ms)
+Completed   in 49ms
+
+ActionView::Template::Error (can't convert String into Integer):
+    1: <h2><%= add_space(@truck.name)%></h2>
+    2: 
+    3: <p>
+    4:   <b>Location:</b>
+  app/helpers/trucks_helper.rb:4:in `split'
+  app/helpers/trucks_helper.rb:4:in `add_space'
+  app/views/trucks/show.html.erb:1:in `_app_views_trucks_show_html_erb__935287674_68495556_0'
+  app/controllers/trucks_controller.rb:16:in `show'
+
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.0ms)
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.0ms)
+
+
+Started GET "/trucks/map" for 127.0.0.1 at Sun Feb 13 19:56:28 -0500 2011
+  Processing by TrucksController#map as HTML
+  [1m[36mTruck Load (1.0ms)[0m  [1mSELECT "trucks".* FROM "trucks"[0m
+Rendered trucks/map.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 32ms (Views: 24.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/7" for 127.0.0.1 at Sun Feb 13 19:56:30 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[35mTruck Load (0.0ms)[0m  SELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 7) LIMIT 1
+Rendered trucks/show.html.erb within layouts/application (6.0ms)
+Completed   in 37ms
+
+ActionView::Template::Error (can't convert String into Integer):
+    1: <h2><%= add_space(@truck.name)%></h2>
+    2: 
+    3: <p>
+    4:   <b>Location:</b>
+  app/helpers/trucks_helper.rb:4:in `split'
+  app/helpers/trucks_helper.rb:4:in `add_space'
+  app/views/trucks/show.html.erb:1:in `_app_views_trucks_show_html_erb__935287674_67413732_0'
+  app/controllers/trucks_controller.rb:16:in `show'
+
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (46.0ms)
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.0ms)
+Rendered C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (68.0ms)
+
+
+Started GET "/trucks/map" for 127.0.0.1 at Sun Feb 13 19:58:09 -0500 2011
+  Processing by TrucksController#map as HTML
+  [1m[36mTruck Load (1.0ms)[0m  [1mSELECT "trucks".* FROM "trucks"[0m
+Rendered trucks/map.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 31ms (Views: 23.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/7" for 127.0.0.1 at Sun Feb 13 19:58:17 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[35mTruck Load (0.0ms)[0m  SELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 7) LIMIT 1
+Rendered trucks/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 40ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trucks/5" for 127.0.0.1 at Sun Feb 13 19:58:18 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mTruck Load (1.0ms)[0m  [1mSELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 5) LIMIT 1[0m
+Rendered trucks/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 39ms (Views: 29.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/8" for 127.0.0.1 at Sun Feb 13 19:58:19 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[35mTruck Load (0.0ms)[0m  SELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 8) LIMIT 1
+Rendered trucks/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 39ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trucks/map" for 127.0.0.1 at Sun Feb 13 19:58:50 -0500 2011
+  Processing by TrucksController#map as HTML
+  [1m[36mTruck Load (1.0ms)[0m  [1mSELECT "trucks".* FROM "trucks"[0m
+Rendered trucks/map.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 31ms (Views: 23.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/7" for 127.0.0.1 at Sun Feb 13 19:58:52 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[35mTruck Load (0.0ms)[0m  SELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 7) LIMIT 1
+Rendered trucks/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 40ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trucks/map" for 127.0.0.1 at Sun Feb 13 19:59:42 -0500 2011
+  Processing by TrucksController#map as HTML
+  [1m[36mTruck Load (1.0ms)[0m  [1mSELECT "trucks".* FROM "trucks"[0m
+Rendered trucks/map.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 31ms (Views: 23.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/7" for 127.0.0.1 at Sun Feb 13 19:59:44 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[35mTruck Load (0.0ms)[0m  SELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 7) LIMIT 1
+Rendered trucks/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 85ms (Views: 75.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trucks/map" for 127.0.0.1 at Sun Feb 13 19:59:57 -0500 2011
+  Processing by TrucksController#map as HTML
+  [1m[36mTruck Load (1.0ms)[0m  [1mSELECT "trucks".* FROM "trucks"[0m
+Rendered trucks/map.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 37ms (Views: 26.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/7" for 127.0.0.1 at Sun Feb 13 19:59:59 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[35mTruck Load (0.0ms)[0m  SELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 7) LIMIT 1
+Rendered trucks/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 40ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trucks/8" for 127.0.0.1 at Sun Feb 13 20:00:05 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mTruck Load (0.0ms)[0m  [1mSELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 8) LIMIT 1[0m
+Rendered trucks/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 39ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trucks/map" for 127.0.0.1 at Sun Feb 13 20:00:40 -0500 2011
+  Processing by TrucksController#map as HTML
+  [1m[35mTruck Load (1.0ms)[0m  SELECT "trucks".* FROM "trucks"
+Rendered trucks/map.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 31ms (Views: 24.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trucks/5" for 127.0.0.1 at Sun Feb 13 20:00:41 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mTruck Load (0.0ms)[0m  [1mSELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 5) LIMIT 1[0m
+Rendered trucks/show.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 83ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/trucks/7" for 127.0.0.1 at Sun Feb 13 20:00:45 -0500 2011
+  Processing by TrucksController#show as */*
+  Parameters: {"id"=>"7"}
+  [1m[35mTruck Load (1.0ms)[0m  SELECT "trucks".* FROM "trucks" WHERE ("trucks"."id" = 7) LIMIT 1
+Rendered trucks/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 37ms (Views: 28.0ms | ActiveRecord: 1.0ms)

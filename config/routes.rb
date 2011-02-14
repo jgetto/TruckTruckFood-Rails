@@ -1,6 +1,7 @@
 Trucktruckfood::Application.routes.draw do
+  
   get "trucks/map"
-
+  match "trucks/:id" => "trucks#show"
   get "trucks/locate"
 
   # The priority is based upon order of creation:
