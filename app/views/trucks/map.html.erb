@@ -7,7 +7,8 @@
   <div style="width:20%;float:left;" id="list">
     <% @trucks.each do |truck| %>
         <div class="row">
-          <strong><%= add_space(truck[:name]).downcase %></strong><%= gps2addr(truck[:lat],truck[:lon]) %><br/>
+          <strong><%= add_space(truck[:name]).downcase %></strong><br/>
+          <%= truck[:location] %><br/>
         </div>
     <% end %>
   </div>

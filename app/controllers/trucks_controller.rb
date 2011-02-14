@@ -7,7 +7,7 @@ class TrucksController < ApplicationController
     @trucks.each do |truck|
       temp_marker = Cartographer::Gmarker.new(:name=> truck[:name], :marker_type => "Building",
                                                :position => [truck[:lat],truck[:lon]],
-                                               :info_window_url => 'trucks/' + truck[:id].to_s)
+                                               :info_window_url => truck[:id].to_s)
       @map.markers << temp_marker
     end
   end
@@ -15,7 +15,7 @@ class TrucksController < ApplicationController
   #POST trucks
   def create
     @truck = Truck.create(params[:truck])
-
+    @truck.location = gps2addr(@truck.lat,@truck.lon)
     respond_to do |format|
       if @truck.save
         format.html # show.html.erb

@@ -1,8 +1,12 @@
 <h2><%= add_space(@truck.name)%></h2>
 
+
 <p>
   <b>Location:</b>
-  <%= [@truck.lat,@truck.lon] %> <br/>
+  <%= get_location(@truck) %>
+  <br/>
   <b>Website:</b>
   <a href= "<%= @truck.site_url %>" target="_blank"><%=@truck.site_url%></a>
 </p>
+
+
