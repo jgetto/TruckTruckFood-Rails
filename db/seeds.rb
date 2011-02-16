@@ -7,7 +7,7 @@
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
 Truck.create(:name => 'Clover_Food_Truck', :site_url => "http://www.cloverfoodlab.com/", :lat => 42.359705, :lon => -71.059215,
-             :location => "1 Cambridge St Boston", :image_url => "http://pixelatedcrumb.files.wordpress.com/2010/08/img_0750.jpg",
+             :location => "1 Cambridge St Boston", :image_url => "image/default_truck.png",
              :description => "We’re here to make food you love, the kind you talk about and look forward to eating. The Clover Food Truck is going to be serving up a new type of fast food. This food is local, it’s just-cut, when we can it will be organic.")
 Truck.create(:name => 'Bon_Me', :site_url => "http://www.cityofboston.gov/Images_Documents/Bon_Me_Menu_v2_tcm3-19773.pdf", :lat => 42.360406, :lon => -71.057993,
              :location => "1 City Hall Square Boston", :image_url => "http://www.cityofboston.gov/Images_Documents/bonmetruckfinal_tcm3-20023.gif",
