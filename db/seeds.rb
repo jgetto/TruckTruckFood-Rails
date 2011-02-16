@@ -8,5 +8,5 @@
 
 Truck.create(:name => 'Olin_Truck', :site_url => "http://www.olin.edu", :lat => 42.291444, :lon =>  -71.2640769, :location => "Olin Way Needham")
 Truck.create(:name => 'Babson_Truck', :site_url => "http://www.babson.edu", :lat => 42.2969514, :lon =>  -71.2652577, :location => "College Dr Wellesley")
-Truck.create(:name => 'Wellesley_Truck', :site_url => "http://www.wellesley.edu", :lat => 42.293405, :lon =>  -71.3067231)
-Truck.create(:name => 'MIT_Truck', :site_url => "http://www.mit.edu", :lat => 42.3597957, :lon => -71.0944908)
+Truck.create(:name => 'Wellesley_Truck', :site_url => "http://www.wellesley.edu", :lat => 42.293405, :lon =>  -71.3067231, :location => "21 College Rd Wellesley")
+Truck.create(:name => 'MIT_Truck', :site_url => "http://www.mit.edu", :lat => 42.3597957, :lon => -71.0944908, :location => "106-120 Massachusetts Ave Cambridge")
