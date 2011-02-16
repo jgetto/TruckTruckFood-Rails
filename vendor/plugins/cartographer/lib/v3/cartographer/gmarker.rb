@@ -1,19 +1,21 @@
 class Cartographer::Gmarker
   #include Reloadable
-  attr_accessor :name, :marker_type, :highlight, :icon, :position, :click, :info_window, :info_window_url, :map, :min_zoom, :max_zoom, :dblclick, :draggable
+  attr_accessor :name, :marker_type, :highlight, :icon, :position, :click, :info_window, :info_window_url, :map, :min_zoom, :max_zoom, :dblclick, :draggable, :shadow
 
   def initialize(options = {})
     @name = options[:name] || "marker"
     @marker_type = options[:marker_type] || nil
     @position = options[:position] || [0, 0]
     @icon = options[:icon] || :normal
+    @shadow = options[:shadow] || :normal
     @click = options[:click] # javascript to execute on click
     @dblclick = options[:dblclick] # javascript to execute on double click
     @info_window = options[:info_window] # html to pop up on click
     @info_window_url = options[:info_window_url] # html to pop up on click fetched from a URL
-    @map = options[:map]
+    @map = options[:map] || 'null'
     @highlight = options[:highlight] || false
     @draggable = options[:draggable] || false
+    @shape = options[:shape]
   
     # inherit our 'debug' settings from the map, if there is one, and it's in debug
     # you can also just debug this marker, if you like, or debug the map and
@@ -55,8 +57,9 @@ class Cartographer::Gmarker
     marker_clusterer = marker_clusterer_flag
     script = []
     script << "// Set up the pre-defined marker" if @debug
-    script << "#{@name} = new google.maps.Marker({map: null,position: new google.maps.LatLng(#{@position[0]}, #{@position[1]}), draggable: #{@draggable}}); \n"
-
+    script << "#{@name} = new google.maps.Marker({map: map,position: new google.maps.LatLng(#{@position[0]}, #{@position[1]}),
+                                                  draggable: #{@draggable},icon: #{@icon},shadow: #{@shadow}}); \n"
+  
     if @click
       script << "// Create the listener for your custom click event" if @debug
       script << "google.maps.event.addListener(#{name}, 'click', function() {#{@click}});\n"

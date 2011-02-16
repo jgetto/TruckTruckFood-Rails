@@ -82,6 +82,7 @@ class Cartographer::Gmap
     @center ||= auto_center
 
     html = []
+    @debug = true
     # setup the JS header
     html << "<!-- initialize the google map and your markers -->" if @debug
     html << "<script type=\"text/javascript\">\n/* <![CDATA[ */\n"  
