@@ -2,7 +2,7 @@ class TrucksController < ApplicationController
    skip_before_filter :verify_authenticity_token
   def map
     @trucks = Truck.all
-    @map = Cartographer::Gmap.new( 'map' )
+    @map = Cartographer::Gmap.new( 'map' , {:max_zoom => 12})
     @map.zoom = :bound
     @map.icons << Cartographer::Gicon.new(:name => "truck",
                                           :image_url => 'images/marker.png',:width => '18' , :height=> '28')
@@ -14,9 +14,16 @@ class TrucksController < ApplicationController
                                               :shadow => "truck_shadow",
                                               :position => [truck[:lat],truck[:lon]],
                                               :info_window_url => "trucks/"+truck[:id].to_s,
-                                              :draggable => false)
+                                              :draggable => false,
+                                              :min_zoom => 5)
       @map.markers << temp_marker
     end
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @story }
+    end
+
   end
 
   #POST trucks

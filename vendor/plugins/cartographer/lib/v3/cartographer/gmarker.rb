@@ -16,7 +16,7 @@ class Cartographer::Gmarker
     @highlight = options[:highlight] || false
     @draggable = options[:draggable] || false
     @shape = options[:shape]
-  
+
     # inherit our 'debug' settings from the map, if there is one, and it's in debug
     # you can also just debug this marker, if you like, or debug the map and
     # not this marker.

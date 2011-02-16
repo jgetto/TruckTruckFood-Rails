@@ -25,7 +25,8 @@
 class Cartographer::Gmap
   
   attr_accessor :dom_id, :draggable, :polylines,:type, :controls,
-  :markers, :center, :zoom, :icons, :debug, :marker_mgr, :current_marker, :marker_clusterer, :shared_info_window, :marker_clusterer_icons
+  :markers, :center, :zoom, :icons, :debug, :marker_mgr, :current_marker, :marker_clusterer, :shared_info_window, :marker_clusterer_icons,
+  :max_zoom
 
 
 
@@ -52,7 +53,7 @@ class Cartographer::Gmap
     @controls  = opts[:controls] || [ :zoom ]
     @center    = opts[:center] || [0,0]
     @zoom      = opts[:zoom] || 1
-    
+    @max_zoom  = opts[:max_zoom] || 1
     @debug = opts[:debug]
     
     @markers = []
@@ -208,10 +209,18 @@ class Cartographer::Gmap
       google.maps.log.write('Current Zoom:' + zoom);
     });" if @debug
 
+    html << "google.maps.event.addListener(map, 'zoom_changed', function() {
+              if (map.getZoom() < #{@max_zoom}) {
+                map.setZoom(#{@max_zoom});
+              }
+            });"
+    
     html << "}" #End of setup marker method
-        
+
     html << "  // Dynamically attach to the window.onload event while still allowing for your existing onload events." if @debug
 
+
+    
     # todo: allow for onload to happen before, or after, the existing onload events, like :before or :after
     if include_onload
       # all these functions need to be added to window.onload due to an IE bug
