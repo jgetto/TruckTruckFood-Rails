@@ -7,7 +7,7 @@
   <div id="list">
     <% @trucks.each do |truck| %>
         <div class="row">
-          <strong><%= add_space(truck[:name]).downcase %></strong><br/>
+          <strong><%= add_space(truck[:name]) %></strong><br/>
           <%= truck[:location] %><br/>
         </div>
     <% end %>
