@@ -6,8 +6,9 @@ $(document).ready(function() {
                 $(".expandy").hide();
                 //toggle the componenet with class msg_body
                 $(".row").click(function() {
-                    $(".expandy").slideUp(600);
+
                     if (!$(this).children().next(".expandy").is(":visible")){
+                         $(".expandy").slideUp(600);
                         $(this).children().next(".expandy").slideToggle(600);
                     }
                 });

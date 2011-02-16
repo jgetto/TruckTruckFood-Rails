@@ -9,7 +9,12 @@
         <div class="row">
           <strong class="truckname"><%= add_space(truck[:name]) %></strong>
           <span class="address"><br/><%= truck[:location] %><br/></span>
-          <div class="expandy">Tthis should eashutaonetuhsnaoeuhsaonehuaoens unsaoehunsaoeh usnatohusnao hunstaoehu nsaoeh usnaoh unsaohu snaohues</div>
+          <div class="expandy">
+            <%= image_tag truck[:image_url], :width => '280' %>
+            <%= truck[:description] %>
+            <br/>
+            <%= link_to "website", truck[:site_url], :target => "_blank" %>
+          </div>
         </div>
     <% end %>
   </div>
