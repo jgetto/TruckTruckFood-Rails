@@ -44,7 +44,8 @@ body{
     right:0;
     top:0;
     bottom:0;
-    float:left;
+    left:300px;
+
     border-style:solid;
     border-width:1px;
     margin: -1px;
@@ -69,7 +70,7 @@ height: 100%;
     height:700px;
 }
 .row{
-    background-color:#99B2B7;
+    
     border-bottom-style:solid;
     border-width:1px;
     height:50px;
