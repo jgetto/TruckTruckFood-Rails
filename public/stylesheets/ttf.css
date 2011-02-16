@@ -81,8 +81,16 @@ height: 100%;
 .truckname{
     line-height:80%;
 }
+.bigtruckname{
+    font-size:20px;
+}
+.desctext{
+    font-size: 11px;
+    text-align:left;
+}
 .address{
     font-size: 11px;
+    vertical-align: middle
 
 }
 .expandy{
