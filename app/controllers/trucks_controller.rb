@@ -1,4 +1,5 @@
 class TrucksController < ApplicationController
+   skip_before_filter :verify_authenticity_token
   def map
     @trucks = Truck.all
     @map = Cartographer::Gmap.new( 'map' )
@@ -14,11 +15,11 @@ class TrucksController < ApplicationController
 
   #POST trucks
   def create
-    @truck = Truck.create(params[:truck])
+    @truck = Truck.create(:name => params[:name],:lon => params[:lon],:lat => params[:lat])
     @truck.location = gps2addr(@truck.lat,@truck.lon)
     respond_to do |format|
       if @truck.save
-        format.html # show.html.erb
+#        format.html # show.html.erb
         format.json {render :json => @truck}
       else
         format.html # show.html.erb
