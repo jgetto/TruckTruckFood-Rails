@@ -8,7 +8,8 @@ class TrucksController < ApplicationController
     @trucks.each do |truck|
       temp_marker = Cartographer::Gmarker.new(:name=> truck[:name], :marker_type => "Building",
                                                :position => [truck[:lat],truck[:lon]],
-                                               :info_window_url => truck[:id].to_s)
+                                               :info_window_url => "trucks/"+truck[:id].to_s,
+                                               :draggable => false)
       @map.markers << temp_marker
     end
   end
@@ -20,7 +21,6 @@ class TrucksController < ApplicationController
     respond_to do |format|
       if @truck.save
 #        format.html # show.html.erb
-        format.json {render :json => @truck}
       else
         format.html # show.html.erb
         format.json {render :json => @truck.errors}

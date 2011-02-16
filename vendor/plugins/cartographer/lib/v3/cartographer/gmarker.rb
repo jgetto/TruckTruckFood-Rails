@@ -55,7 +55,7 @@ class Cartographer::Gmarker
     marker_clusterer = marker_clusterer_flag
     script = []
     script << "// Set up the pre-defined marker" if @debug
-    script << "#{@name} = new google.maps.Marker({map: null,position: new google.maps.LatLng(#{@position[0]}, #{@position[1]}), draggable: true}); \n"
+    script << "#{@name} = new google.maps.Marker({map: null,position: new google.maps.LatLng(#{@position[0]}, #{@position[1]}), draggable: #{@draggable}}); \n"
 
     if @click
       script << "// Create the listener for your custom click event" if @debug
