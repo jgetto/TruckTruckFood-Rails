@@ -2,9 +2,9 @@
 <%= raw @map.to_html%>
 
 
-<div id="header" >truck truck food.</div>
+<div id="header" ><%= image_tag 'logo.png' %></div>
 <div id="content">
-  <div style="width:20%;float:left;" id="list">
+  <div id="list">
     <% @trucks.each do |truck| %>
         <div class="row">
           <strong><%= add_space(truck[:name]).downcase %></strong><br/>
@@ -16,3 +16,4 @@
   <div id="map" >It looks like there are no trucks right now.</div>
 
 </div>
+<div id="under">&nbsp;</div>
