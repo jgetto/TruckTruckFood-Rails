@@ -4,7 +4,7 @@ Trucktruckfood::Application.routes.draw do
   get "trucks/locate"
   post "truck" => "trucks#create" 
   get "trucks/:id" => "trucks#show"
-
+  post "trucks/:id" => "trucks#update" 
   root :to => "trucks#map"
   # The priority is based upon order of creation:
   # first created -> highest priority.

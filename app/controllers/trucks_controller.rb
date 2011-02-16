@@ -21,13 +21,32 @@ class TrucksController < ApplicationController
     respond_to do |format|
       if @truck.save
 #        format.html # show.html.erb
+        format.json {render :json => @truck}
       else
         format.html # show.html.erb
         format.json {render :json => @truck.errors}
       end
     end
   end
-  
+
+# POST update
+  def update
+    puts params
+    @truck = Truck.find_by_id(params[:id]);
+    @truck.lon = params[:lon];
+    @truck.lat = params[:lat];
+    @truck.location = gps2addr(@truck.lat,@truck.lon)
+    respond_to do |format|
+      if @truck.save
+#        format.html # show.html.erb
+        format.json {redner :json => @truck}
+      else
+        format.html # show.html.erb
+        format.json {render :json => @truck.errors}
+      end
+    end
+  end
+   
   def show
     @truck = Truck.find(params[:id])
     respond_to do |format|
