@@ -4,4 +4,4 @@ log/*.log
 tmp/**/*
 .idea
 .DS_Store
-GEmfile.lock
+Gemfile.lock
