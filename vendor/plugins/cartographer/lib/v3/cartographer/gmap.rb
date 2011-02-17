@@ -53,7 +53,7 @@ class Cartographer::Gmap
     @controls  = opts[:controls] || [ :zoom ]
     @center    = opts[:center] || [0,0]
     @zoom      = opts[:zoom] || 1
-    @max_zoom  = opts[:max_zoom] || 1
+    @min_zoom  = opts[:min_zoom] || 1
     @debug = opts[:debug]
     
     @markers = []
@@ -86,7 +86,7 @@ class Cartographer::Gmap
     @debug = true
     # setup the JS header
     html << "<!-- initialize the google map and your markers -->" if @debug
-    html << "<script type=\"text/javascript\">\n/* <![CDATA[ */\n"  
+    html << "<script type=\"text/javascript\">\n/* <![CDATA[ */\n"
     html << to_js(opts[:include_onload])
     html << "/* ]]> */</script> "
     html << "<!-- end of cartographer code -->" if @debug
@@ -113,7 +113,7 @@ class Cartographer::Gmap
 
     html << "// define the map-initializing function for the onload event" if @debug
     html << "function initialize_gmap_#{@dom_id}() {
-#{@dom_id} = new google.maps.Map(document.getElementById(\"#{@dom_id}\"),{center: new google.maps.LatLng(0, 0), zoom: 0, mapTypeId: google.maps.MapTypeId.ROADMAP});"
+#{@dom_id} = new google.maps.Map(document.getElementById(\"#{@dom_id}\"),{minZoom: #{@min_zoom},center: new google.maps.LatLng(0, 0), zoom: 0, mapTypeId: google.maps.MapTypeId.ROADMAP});"
 
     html << "  #{@dom_id}.draggable = false;" if @draggable == false
     
@@ -209,12 +209,6 @@ class Cartographer::Gmap
       google.maps.log.write('Current Zoom:' + zoom);
     });" if @debug
 
-    html << "google.maps.event.addListener(map, 'zoom_changed', function() {
-              if (map.getZoom() < #{@max_zoom}) {
-                map.setZoom(#{@max_zoom});
-              }
-            });"
-    
     html << "}" #End of setup marker method
 
     html << "  // Dynamically attach to the window.onload event while still allowing for your existing onload events." if @debug
