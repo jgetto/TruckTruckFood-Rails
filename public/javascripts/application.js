@@ -12,4 +12,6 @@ $(document).ready(function() {
                         $(this).children().next(".expandy").slideToggle(600);
                     }
                 });
+
 });
+

@@ -210,18 +210,22 @@ class Cartographer::Gmap
 
     html << "
       google.maps.event.addDomListener(document.getElementById('Clover_Food_Truck'),'click', centerMap);
+      google.maps.event.addDomListener(document.getElementById('Clover_Food_Truck'),'mouseover', changeIcon);
+      google.maps.event.addDomListener(document.getElementById('Clover_Food_Truck'),'mouseout', changeIconBack);
 
       function changeIcon() {
         Clover_Food_Truck.setIcon(truck_alt);
        }
+      function changeIconBack() {
+        Clover_Food_Truck.setIcon(truck);
+       }
 
       function centerMap(){
         map.setCenter(Clover_Food_Truck.getPosition());
-        Clover_Food_Truck.setIcon(truck_alt);
 
       }
     "
-    
+
 
     html << "}" #End of setup marker method
 
