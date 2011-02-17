@@ -6,6 +6,8 @@ class TrucksController < ApplicationController
     @map.zoom = :bound
     @map.icons << Cartographer::Gicon.new(:name => "truck",
                                           :image_url => 'images/marker.png',:width => '18' , :height=> '28')
+    @map.icons << Cartographer::Gicon.new(:name => "truck_alt",
+                                          :image_url => 'images/marker_alt.png',:width => '18' , :height=> '28')        
     @map.icons << Cartographer::Gicon.new(:name => "truck_shadow",
                                           :image_url => 'images/shadow-marker2.png',:width => '48' , :height=> '28')
     @trucks.each do |truck|

@@ -6,7 +6,7 @@
 <div id="content">
   <div id="list">
     <% @trucks.each do |truck| %>
-        <div class="row">
+        <div class="row" id="<%= truck[:name] %>" >
           <strong class="truckname"><%= add_space(truck[:name]) %></strong>
           <span class="address"><br/><%= truck[:location] %><br/></span>
           <div class="expandy">

@@ -194,8 +194,6 @@ class Cartographer::Gmap
       marker_types.each {|marker_type| html << "var clusterBatch_#{marker_type} = [];"}
       @markers.each {|m| html <<   "clusterBatch_#{m.marker_type}.push(#{m.name});"}
 
-
-
       marker_types.sort.each_with_index {|marker_type, index|
         clustr_opts =[]
         clustr_opts << "gridSize: 20"
@@ -209,6 +207,22 @@ class Cartographer::Gmap
       google.maps.log.write('Current Zoom:' + zoom);
     });" if @debug
 
+
+    html << "
+      google.maps.event.addDomListener(document.getElementById('Clover_Food_Truck'),'click', centerMap);
+
+      function changeIcon() {
+        Clover_Food_Truck.setIcon(truck_alt);
+       }
+
+      function centerMap(){
+        map.setCenter(Clover_Food_Truck.getPosition());
+        Clover_Food_Truck.setIcon(truck_alt);
+
+      }
+    "
+    
+
     html << "}" #End of setup marker method
 
     html << "  // Dynamically attach to the window.onload event while still allowing for your existing onload events." if @debug
@@ -221,15 +235,15 @@ class Cartographer::Gmap
       @@window_onload << "gmap_#{@dom_id}();\n"
 
       html << "
-if (typeof window.onload != 'function')
-  window.onload = initialize_gmap_#{@dom_id};
-else {
-  old_before_cartographer_#{@dom_id} = window.onload;
-  window.onload = function() { 
-    old_before_cartographer_#{@dom_id}(); 
-    initialize_gmap_#{@dom_id}(); 
-  }
-}"      
+            if (typeof window.onload != 'function')
+              window.onload = initialize_gmap_#{@dom_id};
+            else {
+              old_before_cartographer_#{@dom_id} = window.onload;
+              window.onload = function() {
+              old_before_cartographer_#{@dom_id}();
+              initialize_gmap_#{@dom_id}();
+            }
+          }"
     else #include_onload == false
       html << "initialize_gmap_#{@dom_id}();"
     end
