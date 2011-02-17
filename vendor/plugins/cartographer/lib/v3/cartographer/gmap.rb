@@ -208,24 +208,26 @@ class Cartographer::Gmap
     });" if @debug
 
 
+    @markers.each do |marker|
     html << "
-      google.maps.event.addDomListener(Clover_Food_Truck,'mouseover', function(){changeIcon(truck_alt);color_row(document.getElementById('Clover_Food_Truck'), '#e0d2d2');});
-      google.maps.event.addDomListener(Clover_Food_Truck,'mouseout', function(){changeIcon(truck);color_row(document.getElementById('Clover_Food_Truck'), '#FFF')});
-      google.maps.event.addDomListener(Clover_Food_Truck,'click', function(){changeIcon(truck);color_row(document.getElementById('Clover_Food_Truck'), '#FFF')});
+      google.maps.event.addDomListener(#{marker.name},'mouseover', function(){changeIcon#{marker.name}(truck_alt);color_row(document.getElementById('#{marker.name}'), '#e0d2d2');});
+      google.maps.event.addDomListener(#{marker.name},'mouseout', function(){changeIcon#{marker.name}(truck);color_row(document.getElementById('#{marker.name}'), '#FFF')});
+      google.maps.event.addDomListener(#{marker.name},'click', function(){changeIcon#{marker.name}(truck);color_row(document.getElementById('#{marker.name}'), '#FFF')});
 
-      google.maps.event.addDomListener(document.getElementById('Clover_Food_Truck'),'click', centerMap);
-      google.maps.event.addDomListener(document.getElementById('Clover_Food_Truck'),'mouseover', function(){changeIcon(truck_alt)});
-      google.maps.event.addDomListener(document.getElementById('Clover_Food_Truck'),'mouseout', function(){changeIcon(truck)});
+      google.maps.event.addDomListener(document.getElementById('#{marker.name}'),'click', centerMap#{marker.name});
+      google.maps.event.addDomListener(document.getElementById('#{marker.name}'),'mouseover', function(){changeIcon#{marker.name}(truck_alt)});
+      google.maps.event.addDomListener(document.getElementById('#{marker.name}'),'mouseout', function(){changeIcon#{marker.name}(truck)});
 
-      function changeIcon(icon) {
-        Clover_Food_Truck.setIcon(icon);
+      function changeIcon#{marker.name}(icon) {
+        #{marker.name}.setIcon(icon);
        }
 
-      function centerMap(){
-        map.setCenter(Clover_Food_Truck.getPosition());
+      function centerMap#{marker.name}(){
+        map.setCenter(#{marker.name}.getPosition());
       }
 
     "
+    end
 
 
     html << "}" #End of setup marker method
