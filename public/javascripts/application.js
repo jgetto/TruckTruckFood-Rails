@@ -12,6 +12,26 @@ $(document).ready(function() {
                         $(this).children().next(".expandy").slideToggle(600);
                     }
                 });
+                $(".truckname").click(function() {
+                     $(".expandy").slideUp(600);
+                });
 
 });
+
+function open_row(row_name){
+    $(".expandy").slideUp(600);
+    if (!$('#'+row_name).children().next(".expandy").is(":visible")){
+         $(".expandy").slideUp(600);
+         $('#'+row_name).children().next(".expandy").slideToggle(600);
+    }
+}
+
+function color_row(row, color){
+
+    if (!$(row).children().next(".expandy").is(":visible")){
+        row.style.backgroundColor = color;
+    } else {
+        row.style.backgroundColor = '#FFF';
+    }
+}
 

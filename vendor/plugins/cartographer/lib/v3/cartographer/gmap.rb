@@ -209,21 +209,22 @@ class Cartographer::Gmap
 
 
     html << "
-      google.maps.event.addDomListener(document.getElementById('Clover_Food_Truck'),'click', centerMap);
-      google.maps.event.addDomListener(document.getElementById('Clover_Food_Truck'),'mouseover', changeIcon);
-      google.maps.event.addDomListener(document.getElementById('Clover_Food_Truck'),'mouseout', changeIconBack);
+      google.maps.event.addDomListener(Clover_Food_Truck,'mouseover', function(){changeIcon(truck_alt);color_row(document.getElementById('Clover_Food_Truck'), '#e0d2d2');});
+      google.maps.event.addDomListener(Clover_Food_Truck,'mouseout', function(){changeIcon(truck);color_row(document.getElementById('Clover_Food_Truck'), '#FFF')});
+      google.maps.event.addDomListener(Clover_Food_Truck,'click', function(){changeIcon(truck);color_row(document.getElementById('Clover_Food_Truck'), '#FFF')});
 
-      function changeIcon() {
-        Clover_Food_Truck.setIcon(truck_alt);
-       }
-      function changeIconBack() {
-        Clover_Food_Truck.setIcon(truck);
+      google.maps.event.addDomListener(document.getElementById('Clover_Food_Truck'),'click', centerMap);
+      google.maps.event.addDomListener(document.getElementById('Clover_Food_Truck'),'mouseover', function(){changeIcon(truck_alt)});
+      google.maps.event.addDomListener(document.getElementById('Clover_Food_Truck'),'mouseout', function(){changeIcon(truck)});
+
+      function changeIcon(icon) {
+        Clover_Food_Truck.setIcon(icon);
        }
 
       function centerMap(){
         map.setCenter(Clover_Food_Truck.getPosition());
-
       }
+
     "
 
 

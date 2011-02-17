@@ -15,7 +15,8 @@ class TrucksController < ApplicationController
                                               :icon => "truck",
                                               :shadow => "truck_shadow",
                                               :position => [truck[:lat],truck[:lon]],
-                                              :info_window_url => "trucks/"+truck[:id].to_s,
+#                                              :info_window_url => "trucks/"+truck[:id].to_s,
+                                              :click => 'open_row(' + truck[:name].inspect + ');',
                                               :draggable => false,
                                               :min_zoom => 5)
       @map.markers << temp_marker
