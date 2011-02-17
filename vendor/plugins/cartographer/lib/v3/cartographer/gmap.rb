@@ -223,7 +223,7 @@ class Cartographer::Gmap
        }
 
       function centerMap#{marker.name}(){
-        map.setCenter(#{marker.name}.getPosition());
+        map.panTo(#{marker.name}.getPosition());
       }
 
     "
